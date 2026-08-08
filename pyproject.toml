@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "armtune"
+version = "0.1.0"
+description = "Agentic auto-tuner for LLM inference on Arm64: benchmark, search, and ship the fastest config."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Modugu Rohith Reddy", email = "rohithreddy1095@gmail.com" }]
+dependencies = []
+
+[project.scripts]
+armtune = "armtune.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["armtune*"]
